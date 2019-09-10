@@ -1,5 +1,6 @@
 package Selenium.Project;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,6 +22,7 @@ public class App
                 "C:\\Users\\sdas\\eclipse-workspace\\Project\\Drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://localhost:3001/");
+		driver.findElement(By.name("click")).click();
     }
 	@AfterTest
 	public void terminateBrowser(){
